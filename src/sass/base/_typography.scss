@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Trajan Pro 3';
+  src: url('#{$font-path}/TrajanPro3Regular.eot');
+  src: local('Trajan Pro 3 Regular'), local('TrajanPro3Regular'),
+      url('#{$font-path}/TrajanPro3Regular.eot?#iefix') format('embedded-opentype'),
+      url('#{$font-path}/TrajanPro3Regular.woff2') format('woff2'),
+      url('#{$font-path}/TrajanPro3Regular.woff') format('woff'),
+      url('#{$font-path}/TrajanPro3Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms Light'), local('TT-Norms-Light'),
+      url('#{$font-path}/TTNorms-Light.woff2') format('woff2'),
+      url('#{$font-path}/TTNorms-Light.woff') format('woff'),
+      url('#{$font-path}/TTNorms-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms Medium'), local('TT-Norms-Medium'),
+      url('#{$font-path}/TTNorms-Medium.woff2') format('woff2'),
+      url('#{$font-path}/TTNorms-Medium.woff') format('woff'),
+      url('#{$font-path}/TTNorms-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
