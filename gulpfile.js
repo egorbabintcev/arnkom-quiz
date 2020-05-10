@@ -55,7 +55,7 @@ gulp.task('images', () => {
 
 gulp.task('server', () => {
   browserSync.init({
-    proxy: 'http://quiz.com'
+    proxy: 'http://arncom.ru'
   })
 })
 
