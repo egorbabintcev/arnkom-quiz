@@ -18,5 +18,8 @@
   "scripts": {
     "start": "gulp",
     "build": "NODE_ENV=production gulp"
+  },
+  "dependencies": {
+    "include-media": "^1.4.9"
   }
 }
