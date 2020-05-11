@@ -5,21 +5,20 @@
 @import 'base/typography';
 @import 'base/colors';
 
+@import 'vendors/include-media';
+
 * {
   box-sizing: border-box;
 }
 
-@media (max-width: 1366px) {
-  html {
+html {
+  @include media('>481px', '<1366px') {
     font-size: 1.17vw;
   }
+  @include media('<=360px') {
+    font-size: 14px;
+  }
 }
-
-// @media (max-width: 960px) {
-//   html {
-//     font-size: 1.66vw;
-//   }
-// }
 
 body {
   min-height: 100vh;
@@ -29,6 +28,13 @@ body {
     position: center;
     repeat: no-repeat;
     size: cover;
+  }
+  @include media('<481px') {
+    background: {
+      image: url('../img/app-background-sm.jpg');
+      position: top center;
+      size: auto 100%;
+    }
   }
 }
 
@@ -47,6 +53,9 @@ body {
   height: em(533);
   position: absolute;
   z-index: -1;
+  @include media('<481px') {
+    display: none;
+  }
 
   &_left {
     left: 0;
@@ -60,11 +69,22 @@ body {
 .header {
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   padding-top: em(50);
+  @include media('>=481px') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media('<481px') {
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+  }
 
   &-logo {
-    justify-self: start;
+    @include media('>=481px') {
+      justify-self: start;
+    }
+    @include media('<481px') {
+      margin-bottom: em(20);
+    }
 
     & img {
       height: em(55);
@@ -73,8 +93,13 @@ body {
 
   &-title {
     align-items: center;
-    justify-self: center;
     text-align: center;
+    @include media('>=481px') {
+      justify-self: center;
+    }
+    @include media('<481px') {
+      margin-bottom: em(30);
+    }
 
     & span {
       color: var(--light-color);
@@ -89,8 +114,10 @@ body {
   }
 
   &-contact {
-    justify-self: end;
     text-align: center;
+    @include media('>=481px') {
+      justify-self: end;
+    }
 
     &__phone {
       color: var(--light-color);
@@ -98,6 +125,9 @@ body {
       font: {
         family: var(--title-font);
         size: em(28);
+      }
+      @include media('<481px') {
+        display: none;
       }
     }
 
@@ -108,6 +138,9 @@ body {
         family: var(--subtitle-font);
         size: em(12);
       }
+      @include media('<481px') {
+        color: var(--light-color);
+      }
     }
   }
 }
@@ -116,6 +149,18 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: em(70);
+  @include media('<481px') {
+    align-items: center;
+    flex-direction: column;
+    padding-top: em(50);
+  }
+
+  &-content {
+    @include media('<481px') {
+      text-align: center;
+      margin-bottom: em(200);
+    }
+  }
 
   &__title {
     color: var(--light-color);
@@ -125,9 +170,12 @@ body {
       family: var(--title-font);
       size: em(60);
     }
+    @include media('<481px') {
+      font-size: em(30);
+    }
 
     & strong {
-      color: var(--accent-color);
+      color: var(--accent-color-khaki);
     }
   }
 
@@ -139,6 +187,9 @@ body {
       family: var(--subtitle-font);
       size: em(26);
       weight: 300;
+    }
+    @include media('<481px') {
+      font-size: em(18);
     }
 
     & strong {
@@ -160,6 +211,9 @@ body {
       size: em(16);
       weight: 500;
     }
+    @include media('<481px') {
+      box-shadow: 0px 5px 2px 0px #8f753c, 0px 5px 60px 20px rgba(89, 189, 201, 0.2);
+    }
   }
 
   &-features {
@@ -180,7 +234,7 @@ body {
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 
     &::before {
-      background-color: var(--accent-color);
+      background-color: var(--accent-color-khaki);
       border-radius: em(5);
       content: '';
       display: block;
@@ -193,7 +247,7 @@ body {
     }
 
     &::after {
-      background-color: var(--accent-color);
+      background-color: var(--accent-color-khaki);
       border-bottom-right-radius: em(10);
       clip-path: polygon(100% 0, 0% 100%, 100% 100%);
       content: '';
@@ -208,7 +262,7 @@ body {
     }
 
     &-title {
-      color: var(--accent-color);
+      color: var(--accent-color-khaki);
       line-height: 1.4;
       margin-bottom: em(20);
       font: {
@@ -232,37 +286,93 @@ body {
 .footer {
   background-color: transparent;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   padding-top: em(75);
   padding-bottom: em(25);
+  @include media('>=481px') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media('<481px') {
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+  }
 
   & div {
     align-items: center;
 
-    &:nth-child(1) {
-      justify-self: start;
+    @include media('>=481px') {
+      &:nth-child(2) {
+        justify-self: start;
+      }
+
+      &:nth-child(3) {
+        justify-self: center;
+      }
+
+      &:nth-child(4) {
+        justify-self: end;
+      }
     }
 
-    &:nth-child(2) {
-      justify-self: center;
-    }
-
-    &:nth-child(3) {
-      justify-self: end;
+    @include media('<481px') {
+      &:nth-of-type(4) {
+        order: 3;
+      }
+      &:nth-of-type(3) {
+        order: 2;
+      }
+      &:nth-of-type(2) {
+        order: 4;
+      }
     }
   }
 
-  &-developer a {
-    color: var(--accent-color-cyan);
-    font: {
-      family: var(--subtitle-font);
-      size: em(14);
+  &-contact {
+    text-align: center;
+    margin-bottom: em(50);
+    @include media('>481px') {
+      display: none;
+    }
+
+    &__phone {
+      color: var(--light-color);
+      line-height: 2;
+      font: {
+        family: var(--title-font);
+        size: em(28);
+      }
+    }
+
+    &__link {
+      color: var(--light-color);
+      text-transform: uppercase;
+      font: {
+        family: var(--subtitle-font);
+        size: em(12);
+      }
+    }
+  }
+
+  &-developer {
+    @include media('<481px') {
+      margin-top: em(40);
+    }
+
+    & a {
+      color: var(--accent-color-cyan);
+      font: {
+        family: var(--subtitle-font);
+        size: em(14);
+      }
     }
   }
 
   &-pass, &-politics {
     text-align: center;
-    & span {
+    @include media('<481px') {
+      margin-bottom: em(10);
+    }
+
+    & * {
       color: var(--light-color);
       opacity: 0.3;
       font: {
