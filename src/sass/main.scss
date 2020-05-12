@@ -1,5 +1,6 @@
 @import 'utils/variables';
 @import 'utils/functions';
+@import 'utils/mixins';
 
 @import 'base/reset';
 @import 'base/typography';
@@ -12,7 +13,7 @@
 }
 
 html {
-  @include media('>481px', '<1366px') {
+  @include media('>=481px', '<1366px') {
     font-size: 1.17vw;
   }
   @include media('<=360px') {
@@ -226,6 +227,18 @@ body {
     min-width: em(280);
     padding: em(45) 0;
     position: relative;
+
+    &::before {
+      border: 1px solid #fff;
+      border-radius: 10px;
+      height: calc(100% - #{em(20)});
+      left: 50%;
+      opacity: 0.3;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - #{em(20)});
+      @include pseudo;
+    }
   }
 
   &__feature {
@@ -234,31 +247,28 @@ body {
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 
     &::before {
-      background-color: var(--accent-color-khaki);
-      border-radius: em(5);
-      content: '';
-      display: block;
       height: em(50);
       left: 0;
-      position: absolute;
-      transform: translateX(-50%);
-      width: em(15);
-      z-index: -1;
+      transform: translateX(-#{em(8)});
+      width: em(27);
+      background: {
+        image: url('../img/feature-angle.svg');
+        size: 100% 100%;
+      }
+      @include pseudo;
     }
 
     &::after {
-      background-color: var(--accent-color-khaki);
-      border-bottom-right-radius: em(10);
-      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-      content: '';
-      display: block;
-      height: em(30);
-      left: 0;
-      position: absolute;
-      top: em(10);
-      transform-origin: 50% 50%;
-      transform: translateX(-55%) rotate(-45deg);
-      width: em(30);
+      height: em(52);
+      left: em(9);
+      opacity: 0.3;
+      top: em(-1);
+      width: em(21);
+      background: {
+        image: url('../img/feature-line.svg');
+        size: 100% 100%;
+      }
+      @include pseudo;
     }
 
     &-title {
@@ -329,7 +339,7 @@ body {
   &-contact {
     text-align: center;
     margin-bottom: em(50);
-    @include media('>481px') {
+    @include media('>480px') {
       display: none;
     }
 
