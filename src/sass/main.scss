@@ -122,6 +122,7 @@ body {
     &__phone {
       color: var(--light-color);
       line-height: 2;
+      text-decoration: none;
       font: {
         family: var(--title-font);
         size: em(28);
@@ -133,6 +134,7 @@ body {
 
     &__link {
       color: var(--accent-color-cyan);
+      text-decoration: underline;
       text-transform: uppercase;
       font: {
         family: var(--subtitle-font);
@@ -298,41 +300,15 @@ body {
   padding-top: em(75);
   padding-bottom: em(25);
   @include media('>=481px') {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, max-content);
   }
   @include media('<481px') {
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
   }
 
-  & div {
+  & > div {
     align-items: center;
-
-    @include media('>=481px') {
-      &:nth-child(2) {
-        justify-self: start;
-      }
-
-      &:nth-child(3) {
-        justify-self: center;
-      }
-
-      &:nth-child(4) {
-        justify-self: end;
-      }
-    }
-
-    @include media('<481px') {
-      &:nth-of-type(4) {
-        order: 3;
-      }
-      &:nth-of-type(3) {
-        order: 2;
-      }
-      &:nth-of-type(2) {
-        order: 4;
-      }
-    }
   }
 
   &-contact {
@@ -361,34 +337,25 @@ body {
     }
   }
 
-  &-developer {
-    @include media('<481px') {
-      margin-top: em(40);
+  &-info, &-pass {
+    color: var(--light-color);
+    line-height: 1.4;
+    opacity: 0.3;
+    text-decoration: none;
+    font: {
+      family: var(--subtitle-font);
+      size: em(14);
+      weight: 300;
     }
-
-    & a {
-      color: var(--accent-color-cyan);
-      font: {
-        family: var(--subtitle-font);
-        size: em(14);
-      }
+    @include media('<481px') {
+      text-align: center;
     }
   }
 
-  &-pass, &-politics {
-    text-align: center;
-    @include media('<481px') {
-      margin-bottom: em(10);
-    }
-
-    & * {
-      color: var(--light-color);
-      opacity: 0.3;
-      font: {
-        family: var(--subtitle-font);
-        size: em(14);
-        weight: 300;
-      }
+  &-info {
+    margin-bottom: em(30);
+    @include media('>=481px') {
+      margin-right: em(50);
     }
   }
 }
