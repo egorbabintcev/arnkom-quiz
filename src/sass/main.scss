@@ -13,11 +13,14 @@
 }
 
 html {
-  @include media('>=481px', '<1366px') {
-    font-size: 1.17vw;
+  @include media('>md', '<=xl') {
+    font-size: 1vw;
   }
-  @include media('<=360px') {
-    font-size: 14px;
+  @include media('<=md') {
+    font-size: 1.75vw;
+  }
+  @include media('<=sm') {
+    font-size: 16px;
   }
 }
 
@@ -30,21 +33,26 @@ body {
     repeat: no-repeat;
     size: cover;
   }
-  @include media('<481px') {
+  @include media('<=md') {
     background: {
       image: url('../img/app-background-sm.jpg');
-      position: top center;
-      size: auto 100%;
+      position: center 35%;
+      size: cover;
     }
   }
 }
 
 #app {
   margin: 0 auto;
-  max-width: 1480px;
   padding: {
     left: em(15);
     right: em(15);
+  }
+  @include media('>xl') {
+    max-width: 1480px;
+  }
+  @include media('>md', '<=xl') {
+    max-width: 1200px;
   }
 }
 
@@ -53,7 +61,7 @@ body {
   height: em(533);
   position: absolute;
   z-index: -1;
-  @include media('<481px') {
+  @include media('<=md') {
     display: none;
   }
 
@@ -70,19 +78,19 @@ body {
   align-items: center;
   display: grid;
   padding-top: em(50);
-  @include media('>=481px') {
+  @include media('>md') {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include media('<481px') {
+  @include media('<=md') {
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
   }
 
   &-logo {
-    @include media('>=481px') {
+    @include media('>md') {
       justify-self: start;
     }
-    @include media('<481px') {
+    @include media('<=md') {
       margin-bottom: em(20);
     }
 
@@ -94,10 +102,10 @@ body {
   &-title {
     align-items: center;
     text-align: center;
-    @include media('>=481px') {
+    @include media('>md') {
       justify-self: center;
     }
-    @include media('<481px') {
+    @include media('<=md') {
       margin-bottom: em(30);
     }
 
@@ -115,7 +123,7 @@ body {
 
   &-contact {
     text-align: center;
-    @include media('>=481px') {
+    @include media('>md') {
       justify-self: end;
     }
 
@@ -127,7 +135,7 @@ body {
         family: var(--title-font);
         size: em(28);
       }
-      @include media('<481px') {
+      @include media('<=md') {
         display: none;
       }
     }
@@ -140,7 +148,7 @@ body {
         family: var(--subtitle-font);
         size: em(12);
       }
-      @include media('<481px') {
+      @include media('<=md') {
         color: var(--light-color);
       }
     }
@@ -151,15 +159,18 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: em(70);
-  @include media('<481px') {
+  @include media('<=md') {
     align-items: center;
     flex-direction: column;
     padding-top: em(50);
   }
 
   &-content {
-    @include media('<481px') {
+    @include media('<=md') {
       text-align: center;
+      margin-bottom: em(160);
+    }
+    @include media('<=sm') {
       margin-bottom: em(200);
     }
   }
@@ -172,7 +183,10 @@ body {
       family: var(--title-font);
       size: em(60);
     }
-    @include media('<481px') {
+    @include media('<=md') {
+      font-size: em(40);
+    }
+    @include media('<=sm') {
       font-size: em(30);
     }
 
@@ -190,7 +204,10 @@ body {
       size: em(26);
       weight: 300;
     }
-    @include media('<481px') {
+    @include media('<=md') {
+      font-size: em(22);
+    }
+    @include media('<=sm') {
       font-size: em(18);
     }
 
@@ -213,7 +230,7 @@ body {
       size: em(16);
       weight: 500;
     }
-    @include media('<481px') {
+    @include media('<=md') {
       box-shadow: 0px 5px 2px 0px #8f753c, 0px 5px 60px 20px rgba(89, 189, 201, 0.2);
     }
   }
@@ -299,10 +316,10 @@ body {
   display: grid;
   padding-top: em(75);
   padding-bottom: em(25);
-  @include media('>=481px') {
+  @include media('>md') {
     grid-template-columns: repeat(2, max-content);
   }
-  @include media('<481px') {
+  @include media('<=md') {
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
   }
@@ -314,7 +331,7 @@ body {
   &-contact {
     text-align: center;
     margin-bottom: em(50);
-    @include media('>480px') {
+    @include media('>md') {
       display: none;
     }
 
@@ -347,14 +364,14 @@ body {
       size: em(14);
       weight: 300;
     }
-    @include media('<481px') {
+    @include media('<=md') {
       text-align: center;
     }
   }
 
   &-info {
     margin-bottom: em(30);
-    @include media('>=481px') {
+    @include media('>md') {
       margin-right: em(50);
     }
   }
