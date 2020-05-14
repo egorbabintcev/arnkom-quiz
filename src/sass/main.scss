@@ -42,7 +42,13 @@ body {
   }
 }
 
+a {
+  text-decoration: underline;
+}
+
 #app {
+  display: grid;
+  grid-template-rows: max-content;
   margin: 0 auto;
   padding: {
     left: em(15);
@@ -53,6 +59,9 @@ body {
   }
   @include media('>md', '<=xl') {
     max-width: 1200px;
+  }
+  @include media('<=md') {
+    justify-items: center;
   }
 }
 
@@ -81,21 +90,36 @@ body {
   @include media('>md') {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include media('<=md') {
+  @include media('>sm', '<=md') {
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
+  }
+  @include media('<=sm') {
+    grid-gap: em(10) em(25);
+    grid-template: repeat(2, max-content)/max-content max-content;
+    grid-template-areas: 'logo title'
+                         'logo contact';
+    justify-items: start;
   }
 
   &-logo {
     @include media('>md') {
       justify-self: start;
     }
-    @include media('<=md') {
+    @include media('>sm', '<=lg') {
       margin-bottom: em(20);
     }
-
+    @include media('<=sm') {
+      height: 100%;
+      grid-area: logo;
+    }
     & img {
-      height: em(55);
+      @include media('<=sm') {
+        height: 100%;
+      }
+      @include media('>sm') {
+        height: em(55);
+      }
     }
   }
 
@@ -105,8 +129,12 @@ body {
     @include media('>md') {
       justify-self: center;
     }
-    @include media('<=md') {
+    @include media('>sm', '<=md') {
       margin-bottom: em(30);
+    }
+    @include media('<=sm') {
+      grid-area: title;
+      text-align: left;
     }
 
     & span {
@@ -125,6 +153,9 @@ body {
     text-align: center;
     @include media('>md') {
       justify-self: end;
+    }
+    @include media('<=sm') {
+      grid-area: contact;
     }
 
     &__phone {
@@ -165,6 +196,9 @@ body {
     flex-direction: column;
     padding-top: em(50);
   }
+  @include media('<=sm') {
+    padding-top: em(75);
+  }
 
   &-content {
     @include media('<=md') {
@@ -172,7 +206,7 @@ body {
       margin-bottom: em(160);
     }
     @include media('<=sm') {
-      margin-bottom: em(200);
+      margin-bottom: em(130);
     }
   }
 
@@ -189,6 +223,9 @@ body {
     }
     @include media('<=sm') {
       font-size: em(30);
+    }
+    @include media('<=xs') {
+      font-size: em(24);
     }
 
     & strong {
@@ -210,6 +247,7 @@ body {
     }
     @include media('<=sm') {
       font-size: em(18);
+      max-width: em(300);
     }
 
     & strong {
@@ -223,9 +261,11 @@ body {
     box-shadow: 0px 5px 2px 0px #8f753c, 0px 5px 60px 20px rgba(#4ec0ce, 0.4);
     color: #372a2a;
     display: inline-block;
+    max-width: em(350);
     padding: em(45) em(95);
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
     font: {
       family: var(--subtitle-font);
       size: em(16);
