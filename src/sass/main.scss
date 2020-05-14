@@ -148,6 +148,7 @@ body {
 }
 
 .main {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding-top: em(70);
@@ -202,7 +203,7 @@ body {
   &__button {
     background: linear-gradient(to bottom, #dec07a, #cea959);
     border-radius: em(15);
-    box-shadow: 0px 5px 2px 0px #8f753c, 0px 5px 60px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 2px 0px #8f753c, 0px 5px 60px 20px rgba(#4ec0ce, 0.4);
     color: #372a2a;
     display: inline-block;
     padding: em(45) em(95);
