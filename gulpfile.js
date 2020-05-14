@@ -28,7 +28,7 @@ gulp.task('styles', () => {
   return gulp.src(paths.src.styles)
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(sass({ includePaths: [ 'node_modules' ] }))
-    .pipe(gulpIf(isProd, cssnano(), autoprefixer()))
+    .pipe(gulpIf(isProd, cssnano({ discardUnused: false }), autoprefixer()))
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(gulp.dest(paths.dest.styles))
 })
