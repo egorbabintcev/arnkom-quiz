@@ -36,7 +36,7 @@
       <div class="main-content">
         <h1 class="main__title">Сэкономьте свое время<br>на поиск, <strong>подбор<br>и просмотр офисов</strong><br>в Москва Сити</h1>
         <h2 class="main__subtitle"><strong>Подберем 5 вариантов офисов по вашим<br>параметрам</strong>, оформим документы,<br>сопроводим сделку. Бесплатно.</h2>
-        <a href="#" class="main__button">подобрать офис</a>
+        <button data-target="#modal-quiz" class="btn-callback modal-open main__button">подобрать офис</button>
       </div>
       <div class="main-features">
         <div class="main__feature">
@@ -73,8 +73,444 @@
       </div>
     </footer>
   </div>
+  <!-- Modal windows -->
+  <div id="modal-quiz" class="modal modal-quiz">
+    <button data-target="#modal-quiz" class="btn-callback modal-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="23px" height="23px"
+      >
+        <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
+        d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z"/>
+        <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
+        d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z"/>
+      </svg>
+    </button>
+    <form action="" class="quiz-form">
+      <div class="quiz-form-wrapper">
+        <div class="quiz-main">
+          <div class="quiz-hint">
+            <div class="quiz-hint__logo">
+              <img src="./img/header-logo.png" alt="">
+            </div>
+            <div class="quiz-hint__text">
+              <span>Тест: «Точный подбор и рассчёт<br>стоимости аренды офиса в Москва Сити»</span>
+            </div>
+          </div>
+          <div class="quiz-steps">
+            <div class="quiz-step is-active">
+              <div class="progress progress_w20">
+                <div class="progress-text">
+                  <span>Осталось 4 вопроса из 5</span>
+                </div>
+                <span class="progress-line"></span>
+              </div>
+              <div class="title">
+                <h4>1. Когда планируете снять офис?</h4>
+              </div>
+              <div class="radio-items">
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="В течение недели"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">В течение недели</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="Через несколько месяцев"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Через несколько месяцев</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="В течение месяца"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">В течение месяца</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="В течение полугода"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">В течение полугода</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="В течение года"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">В течение года</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="Точных дат нет"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Точных дат нет</span>
+                </label>
+              </div>
+              <div class="controls">
+                <button type="button" class="controls__button controls__button_next btn-callback next-step">
+                  На следующий шаг
+                  <svg
+                    class="controls__button-arrow"
+                    viewbox="0 0 28 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                  </svg>
+                </button>
+                <button type="button" class="controls__button controls__button_skip btn-callback next-step">Пропустить Вопрос</button>
+              </div>
+            </div>
+            <div class="quiz-step">
+              <div class="progress progress_w35">
+                <div class="progress-text">
+                  <span>Осталось 3 вопроса из 5</span>
+                </div>
+                <span class="progress-line"></span>
+              </div>
+              <div class="title">
+                <h4>2. Помещение какой площади вы рассматриваете?</h4>
+              </div>
+              <div class="radio-items">
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="до 40м2"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">до 40м2</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="40-60м2"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">40-60м2</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="60-85м2"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">60-85м2</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="82-120м2"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">82-120м2</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="Более 120м2"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Более 120м2</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_square" value="Рассмотрю все варианты"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Рассмотрю все варианты</span>
+                </label>
+              </div>
+              <div class="controls">
+                <button type="button" class="controls__button controls__button_next btn-callback next-step">
+                  На следующий шаг
+                  <svg
+                    class="controls__button-arrow"
+                    viewbox="0 0 28 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                  </svg>
+                </button>
+                <button type="button" class="controls__button controls__button_skip btn-callback next-step">Пропустить Вопрос</button>
+              </div>
+            </div>
+            <div class="quiz-step">
+              <div class="progress progress_w50">
+                <div class="progress-text">
+                  <span>Осталось 2 вопроса из 5</span>
+                </div>
+                <span class="progress-line"></span>
+              </div>
+              <div class="title">
+                <h4>3. На каком этаже должен располагаться офис</h4>
+              </div>
+              <div class="radio-items">
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="1-10 этаж"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">1-10 этаж</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="10-25 этаж"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">10-25 этаж</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="25-45 этаж"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">25-45 этаж</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="45-60 этаж"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">45-60 этаж</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="Выше 60 этажа"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Выше 60 этажа</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_floor" value="Этаж не важен"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">Этаж не важен</span>
+                </label>
+              </div>
+              <div class="controls">
+                <button type="button" class="controls__button controls__button_next btn-callback next-step">
+                  На следующий шаг
+                  <svg
+                    class="controls__button-arrow"
+                    viewbox="0 0 28 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                  </svg>
+                </button>
+                <button type="button" class="controls__button controls__button_skip btn-callback next-step">Пропустить Вопрос</button>
+              </div>
+            </div>
+            <div class="quiz-step">
+              <div class="progress progress_w75">
+                <div class="progress-text">
+                  <span>Остался 1 вопрос из 5</span>
+                </div>
+                <span class="progress-line"></span>
+              </div>
+              <div class="title">
+                <h4>4. На какой срок собираетесь въезжать?</h4>
+              </div>
+              <div class="radio-items">
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="1 месяц"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">1 месяц</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="3-6 месяцев"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">3-6 месяцев</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="12 месяцев"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">12 месяцев</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="rent_date" value="более 12 месяцев"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point"></span>
+                  <span class="radio-text">более 12 месяцев</span>
+                </label>
+              </div>
+              <div class="controls">
+                <button type="button" class="controls__button controls__button_next btn-callback next-step">
+                  На следующий шаг
+                  <svg
+                    class="controls__button-arrow"
+                    viewbox="0 0 28 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                  </svg>
+                </button>
+                <button type="button" class="controls__button controls__button_skip btn-callback next-step">Пропустить Вопрос</button>
+              </div>
+            </div>
+            <div class="quiz-step">
+              <div class="progress progress_w90">
+                <div class="progress-text">
+                  <span>Последний вопрос</span>
+                </div>
+                <span class="progress-line"></span>
+              </div>
+              <div class="title">
+                <h4>5. Какие дополнительные параметры вам нужны?</h4>
+              </div>
+              <div class="radio-items">
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Вид на город"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Вид на город</span>
+                </label>
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Скидка на паркинг"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Скидка на паркинг</span>
+                </label>
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Без ремонта"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Без ремонта</span>
+                </label>
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Интернет по Wi-Fi"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Интернет по Wi-Fi</span>
+                </label>
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Наличие мебели"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Наличие мебели</span>
+                </label>
+                <label class="radio">
+                  <input type="checkbox" name="rent_features" value="Возможность установки перегородок"  class="radio-input">
+                  <svg class="radio-bg">
+                    <use xlink:href="./img/radio-bg.svg#radio-bg_big"></use>
+                  </svg>
+                  <span class="radio-point radio-point_check"></span>
+                  <span class="radio-text">Возможность установки перегородок</span>
+                </label>
+              </div>
+              <div class="controls">
+                <button type="button" class="controls__button controls__button_next btn-callback next-step">
+                  На следующий шаг
+                  <svg
+                    class="controls__button-arrow"
+                    viewbox="0 0 28 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
+                    d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                  </svg>
+                </button>
+                <button type="button" class="controls__button controls__button_skip btn-callback next-step">Пропустить Вопрос</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-sidebar">
+          <div class="quiz-help">
+            <div class="quiz-help__manager">
+              <img src="./img/avatar.png" alt="" class="quiz-help__manager-avatar">
+              <div>
+                <p class="quiz-help__manager-title">Анна Качанова</p>
+                <span class="quiz-help__manager-subtitle">Менеджер</span>
+              </div>
+            </div>
+            <div class="quiz-help__cloud">
+              <p class="quiz-help__cloud-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium, doloremque placeat vero sed aperiam tenetur suscipit ipsam voluptas labore non eligendi voluptatum fuga quos nam excepturi. Nemo!</p>
+            </div>
+          </div>
+          <div class="quiz-youget">
+            <p class="quiz-youget__title">По окончанию теста вы получите:</p>
+            <div class="quiz-youget__gift">
+              <p class="quiz-youget__gift-title">Каталог<br>подходящих<br>офисов</p>
+              <img src="./img/gift-pic-1.png" alt="" class="quiz-youget__gift-pic">
+            </div>
+            <div class="quiz-youget__gift">
+              <p class="quiz-youget__gift-title">Коммерческое<br>предложение<br>со стоимостью аренды</p>
+              <img src="./img/gift-pic-2.png" alt="" class="quiz-youget__gift-pic">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 
   <!-- Connecting scripts -->
+  <script src="./js/jquery.min.js"></script>
   <script async src="./js/main.js"></script>
 </body>
 </html>
