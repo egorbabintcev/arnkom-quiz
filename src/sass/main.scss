@@ -14,7 +14,7 @@
 
 html {
   @include media('>md', '<=xl') {
-    font-size: 1vw;
+    font-size: 0.95vw;
   }
   @include media('<=md') {
     font-size: 1.75vw;
@@ -444,33 +444,51 @@ a {
 
 .modal {
   display: none;
+  opacity: 0;
+  padding: em(50) 0;
+  transition: opacity .4s;
   z-index: 999;
+
+  &.is-open {
+    opacity: 1;
+  }
 
   &-close {
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(calc(100% + #{em(15)}));
+    transform: translate(calc(100% + #{em(10)}));
+  }
+
+  &-dialog {
+    display: flex;
+  }
+
+  &-content {
+    margin: 0 auto;
+    position: relative;
   }
 }
 
 .modal-quiz {
-  background-color: var(--dark-color);
-  border-radius: em(10);
-  left: 50%;
-  max-width: em(1170);
-  min-width: em(1170);
-  min-height: em(775);
+  bottom: 0;
+  left: 0;
+  overflow: hidden auto;
   position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  top: 0;
 }
 
 .quiz {
   &-form {
+    background-color: var(--dark-color);
+    border-radius: em(10);
     color: var(--light-color);
     font-family: var(--subtitle-font);
-    width: 100%;
+    margin: 0 auto;
+    max-width: em(1170);
+    min-width: em(1170);
+    min-height: em(775);
 
     &-wrapper {
       display: flex;
@@ -689,9 +707,14 @@ a {
         max-width: em(300);
         min-width: em(300);
         text-transform: uppercase;
+        transition: .25s;
         white-space: nowrap;
         font: {
           size: em(16);
+        }
+
+        &[disabled] {
+          opacity: 0.5;
         }
 
         &_next {
