@@ -443,10 +443,16 @@ a {
 }
 
 .modal {
+  bottom: 0;
   display: none;
+  left: 0;
   opacity: 0;
+  overflow: hidden auto;
   padding: em(50) 0;
+  position: fixed;
+  right: 0;
   transition: opacity .4s;
+  top: 0;
   z-index: 999;
 
   &.is-open {
@@ -461,7 +467,10 @@ a {
   }
 
   &-dialog {
+    align-items: center;
     display: flex;
+    margin: 1em;
+    min-height: calc(100% - 2em);
   }
 
   &-content {
@@ -471,12 +480,6 @@ a {
 }
 
 .modal-quiz {
-  bottom: 0;
-  left: 0;
-  overflow: hidden auto;
-  position: fixed;
-  right: 0;
-  top: 0;
 }
 
 .quiz {
