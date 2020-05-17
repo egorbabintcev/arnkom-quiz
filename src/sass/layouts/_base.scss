@@ -1,0 +1,72 @@
+html {
+  @include media('>md', '<=xl') {
+    font-size: 0.95vw;
+  }
+  @include media('<=md') {
+    font-size: 1.75vw;
+  }
+  @include media('<=sm') {
+    font-size: 16px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background: {
+    image: url('../img/app-background.jpg');
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  @include media('<=md') {
+    background: {
+      image: url('../img/app-background-sm.jpg');
+      position: center 35%;
+      size: cover;
+    }
+  }
+
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+.app {
+  margin: 0 auto;
+  padding: {
+    left: em(15);
+    right: em(15);
+  }
+  @include media('>xl') {
+    max-width: 1480px;
+  }
+  @include media('>md', '<=xl') {
+    max-width: 1200px;
+  }
+  @include media('<=md') {
+    justify-items: center;
+  }
+
+  &-background-mockup {
+    bottom: 0;
+    height: em(533);
+    position: absolute;
+    z-index: -1;
+    @include media('<=md') {
+      display: none;
+    }
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
+  }
+}
+
+*[hidden] {
+  display: none !important;
+}

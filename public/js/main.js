@@ -1,12 +1,12 @@
 $('.btn-callback.modal-open').on('click', function(e) {
   e.preventDefault();
-  $('body').addClass(['darken', 'lock']);
+  $('body').addClass('is-lock');
   $(this.dataset.target).show({ duration: 0, done: function() { $(this).addClass('is-open') } });
 })
 
 $('.btn-callback.modal-close').on('click', function(e) {
   e.preventDefault();
-  $('body').removeClass(['darken', 'lock']);
+  $('body').removeClass('is-lock');
   $(this.dataset.target).hide({ duration: 0, done: function() { $(this).removeClass('is-open') } });
 })
 
@@ -26,7 +26,6 @@ $('.btn-callback.next-step').on('click', function(e) {
     return;
   }
 })
-
 
 function radioChangeListener() {
   console.log('changed');

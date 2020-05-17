@@ -1,0 +1,105 @@
+.header {
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  padding-top: em(50);
+  @include media('>md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media('>sm', '<=md') {
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+  }
+  @include media('<=sm') {
+    grid-gap: em(10) em(25);
+    grid-template: repeat(2, max-content)/max-content max-content;
+    grid-template-areas: 'logo title'
+                         'logo contact';
+    justify-items: start;
+  }
+
+  &-logo {
+    @include media('>md') {
+      justify-self: start;
+    }
+    @include media('>sm', '<=lg') {
+      margin-bottom: em(20);
+    }
+    @include media('<=sm') {
+      height: 100%;
+      grid-area: logo;
+    }
+    & img {
+      width: auto;
+
+      @include media('<=sm') {
+        height: 100%;
+      }
+      @include media('>sm') {
+        height: em(55);
+      }
+    }
+  }
+
+  &-title {
+    align-items: center;
+    text-align: center;
+    @include media('>md') {
+      justify-self: center;
+    }
+    @include media('>sm', '<=md') {
+      margin-bottom: em(30);
+    }
+    @include media('<=sm') {
+      grid-area: title;
+      text-align: left;
+    }
+
+    & span {
+      color: var(--light-color);
+      line-height: 1.4;
+      opacity: 0.3;
+      font: {
+        family: var(--subtitle-font);
+        weight: 300;
+        size: em(14);
+      }
+    }
+  }
+
+  &-contact {
+    text-align: center;
+    @include media('>md') {
+      justify-self: end;
+    }
+    @include media('<=sm') {
+      grid-area: contact;
+    }
+
+    &__phone {
+      color: var(--light-color);
+      line-height: 2;
+      text-decoration: none;
+      font: {
+        family: var(--title-font);
+        size: em(28);
+      }
+      @include media('<=md') {
+        display: none;
+      }
+    }
+
+    &__link {
+      color: var(--accent-color-cyan);
+      text-decoration: underline;
+      text-transform: uppercase;
+      font: {
+        family: var(--subtitle-font);
+        size: em(12);
+      }
+      @include media('<=md') {
+        color: var(--light-color);
+      }
+    }
+  }
+}

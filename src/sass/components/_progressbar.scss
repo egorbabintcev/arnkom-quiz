@@ -1,0 +1,72 @@
+.progress {
+  background-color: var(--dark-color-lighter);
+  border-radius: em(18);
+  margin-bottom: em(45);
+  max-height: em(35);
+  min-height: em(35);
+  position: relative;
+
+  &_w20 .progress-line {
+    width: 20%;
+  }
+
+  &_w35 .progress-line {
+    width: 35%;
+  }
+
+  &_w50 .progress-line {
+    width: 50%;
+  }
+
+  &_w75 .progress-line {
+    width: 75%;
+  }
+
+  &_w90 .progress-line {
+    width: 90%;
+  }
+
+  &-text {
+    line-height: em(35);
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    transform: translateX(50%);
+    z-index: 1;
+    font: {
+      size: em(14);
+    }
+  }
+
+  &-line {
+    background-color: var(--accent-color-green);
+    border-radius: inherit;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    &::before {
+      @keyframes strip-move {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: em(15) 0;
+        }
+      }
+      animation: strip-move 1s linear infinite;
+      background: {
+        image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        size: em(15) em(15);
+        position: 0 0;
+      };
+      border-radius: inherit;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      @include pseudo;
+    }
+  }
+}
