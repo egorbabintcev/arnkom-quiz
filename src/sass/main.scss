@@ -479,10 +479,81 @@ a {
   }
 }
 
-.modal-quiz {
+.progress {
+  background-color: var(--dark-color-lighter);
+  border-radius: em(18);
+  margin-bottom: em(45);
+  max-height: em(35);
+  min-height: em(35);
+  position: relative;
+
+  &_w20 .progress-line {
+    width: 20%;
+  }
+
+  &_w35 .progress-line {
+    width: 35%;
+  }
+
+  &_w50 .progress-line {
+    width: 50%;
+  }
+
+  &_w75 .progress-line {
+    width: 75%;
+  }
+
+  &_w90 .progress-line {
+    width: 90%;
+  }
+
+  &-text {
+    line-height: em(35);
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    transform: translateX(50%);
+    z-index: 1;
+    font: {
+      size: em(14);
+    }
+  }
+
+  &-line {
+    background-color: var(--accent-color-green);
+    border-radius: inherit;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    &::before {
+      @keyframes strip-move {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: em(15) 0;
+        }
+      }
+      animation: strip-move 1s linear infinite;
+      background: {
+        image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        size: em(15) em(15);
+        position: 0 0;
+      };
+      border-radius: inherit;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      @include pseudo;
+    }
+  }
 }
 
 .quiz {
+
   &-form {
     background-color: var(--dark-color);
     border-radius: em(10);
@@ -519,6 +590,248 @@ a {
     min-width: em(300);
   }
 
+  &-cta {
+    display: grid;
+    grid-template: 'logo' max-content 'progress' max-content '.' auto/ auto;
+    justify-items: center;
+    width: 100%;
+
+    &-logo {
+      grid-area: logo;
+      margin-bottom: em(35);
+    }
+
+    &-progress {
+      grid-area: progress;
+      max-width: em(610);
+      min-width: em(610);
+    }
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-thanks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: em(610);
+      min-width: em(610 );
+
+      &__title {
+        margin-bottom: 15px;
+        font: {
+          size: em(30);
+          weight: 300;
+        }
+      }
+
+      &__subtitle {
+        line-height: 1.4;
+        opacity: 0.3;
+        font: {
+          size: em(20);
+          weight: 300;
+        }
+      }
+    }
+
+    &-gifts {
+      &__title {
+        margin-bottom: 20px;
+        font: {
+          size: em(16);
+          weight: 300;
+        }
+      }
+    }
+
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: em(300);
+      min-width: em(300);
+
+      &__title {
+        margin-bottom: 20px;
+        font: {
+          size: em(26);
+          weight: 300;
+        }
+      }
+
+      &__subtitle {
+        line-height: 1.4;
+        opacity: 0.4;
+        font: {
+          size: em(14);
+          weight: 300;
+        }
+      }
+    }
+
+    &__input {
+      &:not(:last-child) {
+        margin-bottom: em(25);
+      }
+
+      &-title {
+        margin-bottom: 15px;
+        font: {
+          size: em(14);
+          weight: 300;
+        }
+      }
+
+      &-items {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-radio {
+        position: relative;
+
+        & input[type="radio"] {
+          display: none;
+        }
+
+        & input[type="radio"]:checked + .quiz-cta__input-radio-bg {
+          fill: var(--accent-color-green);
+        }
+
+        &-bg {
+          fill: var(--dark-color-lighter);
+          max-height: em(80);
+          min-height: em(80);
+          max-width: em(70);
+          min-width: em(70);
+          transition: fill .25s;
+        }
+
+        &-icon {
+          position: absolute;
+          top: em(15);
+          left: 50%;
+          transform: translateX(-50%);
+          width: em(35);
+          height: em(35);
+        }
+
+        &-title {
+          bottom: em(20);
+          left: 50%;
+          opacity: 0.4;
+          position: absolute;
+          transform: translateX(-50%);
+          font: {
+            size: em(10);
+            weight: 300;
+          }
+        }
+      }
+
+      &-field {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        & input {
+          background: transparent;
+          border: none;
+          color: var(--light-color);
+          display: block;
+          height: 100%;
+          opacity: 0.4;
+          padding: 0 em(35);
+          position: absolute;
+          width: 100%;
+          font: {
+            size: em(16);
+            weight: 300;
+          }
+
+          &:focus {
+            opacity: 1;
+            outline: none;
+          }
+        }
+
+        &-bg {
+          display: block;
+          max-height: em(75);
+          min-height: em(75);
+          min-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    &__submit-btn {
+      align-items: center;
+      background: linear-gradient(to bottom, #dec07a, #cea959);
+      border-radius: 15px;
+      box-shadow: 0px 4px 2px 0px #8f753c, 0px 5px 20px 5px rgba(#dec07a, 0.2);
+      display: inline-flex;
+      justify-content: center;
+      max-height: 75px;
+      min-height: 75px;
+      max-width: 100%;
+      min-width: 100%;
+      transition: .25s;
+
+      & span {
+        color: #372a2a;
+        text-transform: uppercase;
+        white-space: nowrap;
+        font: {
+          size: em(13);
+          weight: 500;
+        }
+      }
+    }
+
+    &__gift {
+      background-color: var(--dark-color-lighter);
+      border-radius: em(10);
+      max-height: em(285);
+      min-height: em(285);
+      max-width: em(295);
+      min-width: em(295);
+      position: relative;
+
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-title {
+        left: em(25);
+        line-height: 1.4;
+        position: absolute;
+        top: em(25);
+        font: {
+          size: em(14);
+          weight: 300;
+        }
+
+        & strong {
+          font-weight: 500;
+        }
+      }
+
+      &-img {
+        bottom: 0;
+        max-height: em(200);
+        max-width: em(285);
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
   &-hint {
     display: flex;
     align-items: center;
@@ -535,7 +848,7 @@ a {
     &__text {
       color: var(--light-color);
       line-height: 1.4;
-      opacity: 0.3;
+      opacity: 0.4;
       font: {
         family: var(--subtitle-font);
         size: em(12);
@@ -551,79 +864,6 @@ a {
 
     &.is-active {
       display: grid;
-    }
-
-    .progress {
-      background-color: var(--dark-color-lighter);
-      border-radius: em(18);
-      margin-bottom: em(45);
-      max-height: em(35);
-      min-height: em(35);
-      position: relative;
-
-      &_w20 .progress-line {
-        width: 20%;
-      }
-
-      &_w35 .progress-line {
-        width: 35%;
-      }
-
-      &_w50 .progress-line {
-        width: 50%;
-      }
-
-      &_w75 .progress-line {
-        width: 75%;
-      }
-
-      &_w90 .progress-line {
-        width: 90%;
-      }
-
-      &-text {
-        line-height: em(35);
-        position: absolute;
-        right: 50%;
-        text-align: center;
-        transform: translateX(50%);
-        z-index: 1;
-        font: {
-          size: em(14);
-        }
-      }
-
-      &-line {
-        background-color: var(--accent-color-green);
-        border-radius: inherit;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-
-        &::before {
-          @keyframes strip-move {
-            from {
-              background-position: 0 0;
-            }
-            to {
-              background-position: em(15) 0;
-            }
-          }
-          animation: strip-move 1s linear infinite;
-          background: {
-            image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            size: em(15) em(15);
-            position: 0 0;
-          };
-          border-radius: inherit;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          top: 0;
-          @include pseudo;
-        }
-      }
     }
 
     .title {
@@ -660,6 +900,7 @@ a {
       }
 
       &-bg {
+        fill: var(--dark-color-lighter);
         max-height: em(75);
         min-height: em(75);
         max-width: em(300);
@@ -832,4 +1073,8 @@ a {
       }
     }
   }
+}
+
+*[hidden] {
+  display: none;
 }

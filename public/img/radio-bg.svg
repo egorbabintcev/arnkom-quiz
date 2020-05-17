@@ -1,8 +1,1 @@
-<svg
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 77" >
- <symbol id="radio-bg_big" preserveAspectRatio="none" viewBox="0 0 300 77">
-    <path fill-rule="evenodd"  fill="rgb(36, 39, 41)"
-    d="M8.844,0.212 L290.269,0.212 C294.687,0.212 298.269,3.794 298.269,8.212 L298.269,68.097 C298.269,72.515 294.687,76.096 290.269,76.096 L8.844,76.096 C4.426,76.096 0.844,72.515 0.844,68.097 L0.844,8.212 C0.844,3.794 4.426,0.212 8.844,0.212 Z"/>
- </symbol>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="77" preserveAspectRatio="none" viewBox="0 0 300 77"><path fill-rule="evenodd" fill="#242729" d="M8.844.212h281.425a8 8 0 018 8v59.885a8 8 0 01-8 7.999H8.844a8 8 0 01-8-7.999V8.212a8 8 0 018-8z"/></svg>
