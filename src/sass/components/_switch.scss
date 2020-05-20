@@ -1,0 +1,22 @@
+.switch {
+  cursor: pointer;
+  position: relative;
+
+  & input[type="radio"], & input[type="checkbox"] {
+    display: none;
+  }
+
+  &-marker, &-text {
+    position: absolute;
+  }
+
+  &-marker {
+    &_square {
+      border-radius: em(2);
+    }
+
+    &_circle {
+      border-radius: 50%;
+    }
+  }
+}

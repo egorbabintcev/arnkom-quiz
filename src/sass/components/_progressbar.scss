@@ -1,9 +1,10 @@
 .progress {
   background-color: var(--dark-color-lighter);
   border-radius: em(18);
-  margin-bottom: em(45);
   max-height: em(35);
   min-height: em(35);
+  max-width: em(615);
+  min-width: em(615);
   position: relative;
 
   &_w20 .progress-line {

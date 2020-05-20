@@ -1,0 +1,30 @@
+.button {
+  align-items: center;
+  display: inline-flex;
+  font-size: 100%;
+  justify-content: center;
+  max-height: em(85);
+  min-height: em(85);
+  max-width: em(300);
+  min-width: em(300);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &_flat {
+    background: linear-gradient(to bottom, #dec07a, #cea959);
+    border-radius: em(15);
+    box-shadow: 0px 4px 2px 0px #8f753c, 0px 5px 20px 5px rgba(#dec07a, 0.2);
+    color: #372a2a;
+    font-weight: 500;
+  }
+
+  &_strip {
+    color: var(--light-color);
+    font-weight: 300;
+    text-decoration: underline;
+  }
+}
