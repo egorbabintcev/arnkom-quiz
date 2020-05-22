@@ -97,9 +97,10 @@
     border-radius: 15px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    max-width: em(280);
+    max-height: em(650);
     min-height: em(650);
     min-width: em(280);
+    max-width: em(280);
     padding: em(45) 0;
     position: relative;
     z-index: -1;
