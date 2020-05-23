@@ -32,7 +32,8 @@
     }
 
     &__link {
-      color: var(--light-color);
+      color: var(--accent-color-cyan);
+      text-decoration: underline;
       text-transform: uppercase;
       font: {
         family: var(--subtitle-font);

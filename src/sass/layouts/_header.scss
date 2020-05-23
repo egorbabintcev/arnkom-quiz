@@ -97,9 +97,6 @@
         family: var(--subtitle-font);
         size: em(12);
       }
-      @include media('<=md') {
-        color: var(--light-color);
-      }
     }
   }
 }
