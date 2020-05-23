@@ -6,6 +6,11 @@
   max-width: em(615);
   min-width: em(615);
   position: relative;
+  @include media('<=sm') {
+    max-width: auto;
+    min-width: auto;
+    width: 100%;
+  }
 
   &_w20 .progress-line {
     width: 20%;

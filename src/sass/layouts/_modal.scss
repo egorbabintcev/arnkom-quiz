@@ -11,6 +11,9 @@
   transition: opacity .4s;
   top: 0;
   z-index: 999;
+  @include media('<=sm') {
+    padding: 0;
+  }
 
   &.is-open {
     opacity: 1;
@@ -21,6 +24,11 @@
     right: 0;
     top: 0;
     transform: translate(calc(100% + #{em(10)}));
+    @include media('<=sm') {
+      right: em(25);
+      top: em(25);
+      transform: none;
+    }
   }
 
   &-dialog {
@@ -28,6 +36,9 @@
     display: flex;
     margin: 1em;
     min-height: calc(100% - 2em);
+    @include media('<=sm') {
+      margin: 0;
+    }
   }
 
   &-content {

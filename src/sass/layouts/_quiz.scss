@@ -10,10 +10,14 @@
     max-width: em(1170);
     min-width: em(1170);
     min-height: em(775);
+    @include media('<=sm') {
+      max-width: em(480);
+      min-width: 100%;
+    }
 
     &-wrapper {
       display: grid;
-      grid-gap: em(35) em(105);
+      grid-gap: em(30) em(105);
       grid-template: {
         rows: minmax(em(55), max-content) minmax(em(560), max-content);
         columns: em(615) em(300);
@@ -21,14 +25,25 @@
                'main sidebar';
       }
       padding: em(65) em(75) em(70);
+      @include media('<=sm') {
+        grid-template: {
+          rows: repeat(3, max-content);
+          columns: 100%;
+          areas: 'topbar'
+                 'main'
+                 'sidebar';
+        }
+        padding: em(50) em(45) em(80);
+      }
+      @include media('>sm') {
+        &.last-step {
+          grid-template-areas: 'topbar topbar'
+                               'main main';
+          justify-items: center;
 
-      &.last-step {
-        grid-template-areas: 'topbar topbar'
-                             'main main';
-        justify-items: center;
-
-        & .quiz-sidebar {
-          display: none;
+          & .quiz-sidebar {
+            display: none;
+          }
         }
       }
     }
@@ -38,6 +53,9 @@
     align-items: center;
     display: flex;
     grid-area: topbar;
+    @include media('<=sm') {
+      flex-direction: column;
+    }
   }
 
   &-main {
@@ -51,6 +69,10 @@
     grid-area: sidebar;
     justify-content: space-between;
     &__help {
+      margin-bottom: em(35);
+      @include media('<=sm') {
+        display: none;
+      }
 
       &-manager {
         align-items: center;
@@ -76,8 +98,6 @@
       &-cloud {
         background-color: #292e31;
         border-radius: em(8);
-        max-height: em(220);
-        min-height: em(220);
         padding: em(30);
         position: relative;
 
@@ -104,38 +124,53 @@
 
     &__youget {
       line-height: 1.4;
-      font: {
-        size: em(14);
-        weight: 300;
+      @include media('<=sm') {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
       }
 
       &-title {
         margin-bottom: em(20);
+        font: {
+          size: em(16);
+          weight: 500;
+        }
       }
 
       &-gift {
         background-color: #292e31;
         border-radius: em(8);
-        max-height: em(95);
-        min-height: em(95);
+        max-height: em(160);
+        min-height: em(160);
         position: relative;
+        overflow: hidden;
+        @include media('<=sm') {
+          max-height: em(170);
+          min-height: em(170);
+          max-width: 80%;
+          min-width: 80%;
+        }
 
         &:not(:last-child) {
           margin-bottom: em(20);
         }
 
-        p {
-          left: em(25);
+        span {
+          left: em(25,14);
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          top: em(25,14);
+          font: {
+            size: em(14);
+            weight: 300;
+          }
         }
 
         img {
-          height: 100%;
+          bottom: 0;
+          max-height: 70%;
           position: absolute;
           right: 0;
-          top: 0;
         }
       }
     }
@@ -147,9 +182,15 @@
     margin-bottom: em(30);
 
     &__logo {
-      margin-right: em(35);
       min-height: em(50);
+      max-height: em(50);
       width: auto;
+      @include media('>sm') {
+        margin-right: em(35);
+      }
+      @include media('<=sm') {
+        margin-bottom: em(15);
+      }
     }
 
     &__text {
@@ -158,6 +199,9 @@
       font: {
         size: em(14);
         weight: 300;
+      }
+      @include media('<=sm') {
+        text-align: center;
       }
     }
   }
@@ -176,6 +220,7 @@
     }
 
     &__progress {
+      font-weight: 300;
       margin-bottom: em(35);
     }
 
@@ -186,17 +231,31 @@
         size: em(24);
         weight: 500;
       }
+      @include media('<=sm') {
+        text-align: center;
+      }
     }
 
     &__answers {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      @include media('<=sm') {
+        justify-content: center;
+        margin-bottom: em(40);
+      }
     }
 
     &__answer {
-      &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: em(15);
+      @include media('>sm') {
+        &:not(:nth-last-child(-n + 2)) {
+          margin-bottom: em(15);
+        }
+      }
+      @include media('<=sm') {
+        &:not(:last-child) {
+          margin-bottom: em(15);
+        }
       }
 
       & input[type="radio"]:checked + &-marker {
@@ -244,6 +303,10 @@
       display: flex;
       justify-content: space-between;
       margin-top: auto;
+      @include media('<=sm') {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
       &-button-arrow {
         height: em(18);
@@ -335,11 +398,11 @@
       }
 
       &-text {
-        left: em(25);
+        left: em(25, 14);
         line-height: 1.4;
         position: absolute;
-        right: em(25);
-        top: em(25);
+        right: em(25, 14);
+        top: em(25, 14);
         font: {
           size: em(14);
           weight: 300;

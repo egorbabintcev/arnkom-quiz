@@ -520,7 +520,7 @@
                       <div class="quiz-cta__switches">
                         <p class="quiz-cta__switches-headline">Введите номер телефона</p>
                         <label class="quiz-cta__tel-input switch">
-                          <input type="text">
+                          <input type="tel" placeholder="+7 (___) ___-__-__">
                           <img src="./img/radio-bg.svg" alt="">
                         </label>
                       </div>
@@ -542,48 +542,21 @@
                   </div>
                 </div>
                 <div class="quiz-sidebar__help-cloud">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium, doloremque placeat vero sed aperiam tenetur suscipit ipsam voluptas labore non eligendi voluptatum fuga quos nam excepturi. Nemo!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium, doloremque placeat.</p>
                 </div>
               </div>
               <div class="quiz-sidebar__youget">
                 <p class="quiz-sidebar__youget-title">По окончанию теста вы получите:</p>
                 <div class="quiz-sidebar__youget-gift">
-                  <p>Каталог<br>подходящих<br>офисов</p>
-                  <img src="./img/gift-pic-1.png" alt="">
+                  <img src="./img/gift-pic-1-lg.png" alt="" class="quiz-cta__gift-img">
+                  <span class="quiz-cta__gift-text"><strong>Подборка подходящих<br>объектов</strong>, которых нет<br> в открытом доступе</span>
                 </div>
                 <div class="quiz-sidebar__youget-gift">
-                  <p>Коммерческое<br>предложение<br>со стоимостью аренды</p>
-                  <img src="./img/gift-pic-2.png" alt="">
+                  <img src="./img/gift-pic-2-lg.png" alt="" class="quiz-cta__gift-img">
+                  <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикризисной стоимостью<br>аренды</strong> и условиями</span>
                 </div>
               </div>
             </div>
-            <!--
-            <div class="quiz-sidebar">
-              <div class="quiz-help">
-                <div class="quiz-help__manager">
-                  <img src="./img/avatar.png" alt="" class="quiz-help__manager-avatar">
-                  <div>
-                    <p class="quiz-help__manager-title">Анна Качанова</p>
-                    <span class="quiz-help__manager-subtitle">Менеджер</span>
-                  </div>
-                </div>
-                <div class="quiz-help__cloud">
-                  <p class="quiz-help__cloud-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium, doloremque placeat vero sed aperiam tenetur suscipit ipsam voluptas labore non eligendi voluptatum fuga quos nam excepturi. Nemo!</p>
-                </div>
-              </div>
-              <div class="quiz-youget">
-                <p class="quiz-youget__title">По окончанию теста вы получите:</p>
-                <div class="quiz-youget__gift">
-                  <p class="quiz-youget__gift-title">Каталог<br>подходящих<br>офисов</p>
-                  <img src="./img/gift-pic-1.png" alt="" class="quiz-youget__gift-pic">
-                </div>
-                <div class="quiz-youget__gift">
-                  <p class="quiz-youget__gift-title">Коммерческое<br>предложение<br>со стоимостью аренды</p>
-                  <img src="./img/gift-pic-2.png" alt="" class="quiz-youget__gift-pic">
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </form>
       </div>
@@ -592,6 +565,7 @@
 
   <!-- Connecting scripts -->
   <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.maskedinput.min.js"></script>
   <script async src="./js/main.js"></script>
 </body>
 </html>
