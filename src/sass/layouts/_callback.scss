@@ -6,10 +6,9 @@
     font-family: var(--subtitle-font);
     margin: 0 auto;
     max-width: 100%;
-    min-width: em(420);
+    min-width: em(420, 18);
     min-height: em(600);
     @include media('<=sm') {
-      min-width: em(480);
       max-width: 100%;
     }
 
