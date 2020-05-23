@@ -44,5 +44,8 @@
   &-content {
     margin: 0 auto;
     position: relative;
+    @include media('<=sm') {
+      width: 100%;
+    }
   }
 }

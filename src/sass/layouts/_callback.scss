@@ -1,0 +1,24 @@
+.callback {
+  &-form {
+    background-color: var(--dark-color);
+    border-radius: em(10);
+    color: var(--light-color);
+    font-family: var(--subtitle-font);
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: em(420);
+    min-height: em(600);
+    @include media('<=sm') {
+      min-width: em(480);
+      max-width: 100%;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      padding: em(45) em(60);
+      width: 100%;
+    }
+  }
+}

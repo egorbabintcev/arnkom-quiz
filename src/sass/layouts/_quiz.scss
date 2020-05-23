@@ -25,16 +25,6 @@
                'main sidebar';
       }
       padding: em(65) em(75) em(70);
-      @include media('<=sm') {
-        grid-template: {
-          rows: repeat(3, max-content);
-          columns: 100%;
-          areas: 'topbar'
-                 'main'
-                 'sidebar';
-        }
-        padding: em(50) em(45) em(80);
-      }
       @include media('>sm') {
         &.last-step {
           grid-template-areas: 'topbar topbar'
@@ -45,6 +35,16 @@
             display: none;
           }
         }
+      }
+      @include media('<=sm') {
+        grid-template: {
+          rows: repeat(3, max-content);
+          columns: 100%;
+          areas: 'topbar'
+                 'main'
+                 'sidebar';
+        }
+        padding: em(50) em(20) em(80);
       }
     }
   }
@@ -322,13 +322,23 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    @include media('<=sm') {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
 
     &__thanks {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: em(610);
-      min-width: em(610 );
+      @include media('>sm') {
+        max-width: em(610);
+        min-width: em(610);
+      }
+      @include media('<=sm') {
+        margin-bottom: em(25);
+      }
 
       &-title {
         margin-bottom: 15px;
@@ -354,12 +364,25 @@
       justify-content: space-between;
       max-width: em(300);
       min-width: em(300);
+      @include media('<=sm') {
+        max-width: em(315);
+        min-width: em(315);
+      }
+
+      & > div:first-child {
+        margin-bottom: em(25);
+      }
 
       &-title {
         margin-bottom: 10px;
         font: {
-          size: em(26);
+          size: em(24);
           weight: 300;
+        }
+        @include media('<=sm') {
+          & br {
+            display: none;
+          }
         }
       }
 
@@ -374,6 +397,10 @@
     }
 
     &__gifts {
+      @include media('<=sm') {
+        display: none;
+      }
+
       &-title {
         margin-bottom: 20px;
         font: {
@@ -424,6 +451,7 @@
 
     &__switches {
       margin-bottom: em(25);
+      text-align: left;
 
       &-headline {
         margin-bottom: 15px;

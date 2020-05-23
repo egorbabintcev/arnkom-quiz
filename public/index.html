@@ -30,7 +30,7 @@
           <a href="tel:+74996382450" class="header-contact__phone">+7 (499) 638-24-50</a>
         </div>
         <div>
-          <a href="#" class="header-contact__link">Заказать обратный звонок</a>
+          <button data-target="#modal-callback" type="button" class="btn-callback modal-open header-contact__link">Заказать обратный звонок</button>
         </div>
       </div>
     </header>
@@ -468,7 +468,7 @@
                   </div>
                   <div class="quiz-cta__form">
                     <div>
-                      <p class="quiz-cta__form-title">Осталось<br>оставить контакты</p>
+                      <p class="quiz-cta__form-title">Осталось<br> оставить контакты</p>
                       <span class="quiz-cta__form-subtitle">Укажите куда отправить:<br>-Подборку подходящих объектов<br>-Антикрисизное коммерческое предложение</span>
                     </div>
                     <div>
@@ -480,9 +480,7 @@
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
-                            <svg class="quiz-cta__switch-icon">
-                              <use xlink:href="./img/messenger-sprite.svg#whatsapp"></use>
-                            </svg>
+                            <img src="./img/whatsapp.png" alt="" class="quiz-cta__switch-icon">
                             <span class="quiz-cta__switch-text switch-text">WhatsApp</span>
                           </label>
                           <label class="switch quiz-cta__switch">
@@ -490,9 +488,7 @@
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
-                            <svg class="quiz-cta__switch-icon">
-                              <use xlink:href="./img/messenger-sprite.svg#telegram"></use>
-                            </svg>
+                            <img src="./img/telegram.png" alt="" class="quiz-cta__switch-icon">
                             <span class="quiz-cta__switch-text switch-text">Telegram</span>
                           </label>
                           <label class="switch quiz-cta__switch">
@@ -500,9 +496,7 @@
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
-                            <svg class="quiz-cta__switch-icon">
-                              <use xlink:href="./img/messenger-sprite.svg#viber"></use>
-                            </svg>
+                            <img src="./img/viber.png" alt="" class="quiz-cta__switch-icon">
                             <span class="quiz-cta__switch-text switch-text">Viber</span>
                           </label>
                           <label class="switch quiz-cta__switch">
@@ -510,9 +504,7 @@
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
-                            <svg class="quiz-cta__switch-icon">
-                              <use xlink:href="./img/messenger-sprite.svg#phone"></use>
-                            </svg>
+                            <img src="./img/phone.png" alt="" class="quiz-cta__switch-icon">
                             <span class="quiz-cta__switch-text switch-text">Телефон</span>
                           </label>
                         </div>
@@ -555,6 +547,83 @@
                   <img src="./img/gift-pic-2-lg.png" alt="" class="quiz-cta__gift-img">
                   <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикризисной стоимостью<br>аренды</strong> и условиями</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="modal-callback" class="modal modal-callback">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button data-target="#modal-callback" class="btn-callback modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="23px" height="23px"
+          >
+            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
+            d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z"/>
+            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
+            d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z"/>
+          </svg>
+        </button>
+        <form class="callback-form">
+          <div class="callback-form-wrapper">
+            <div class="quiz-cta__form">
+              <div>
+                <p class="quiz-cta__form-title">Заказать<br>обратный звонок</p>
+                <span class="quiz-cta__form-subtitle">Оставьте ваши данные, и наш специалист<br>свяжется с вами в течение 8 минут</span>
+              </div>
+              <div>
+                <div class="quiz-cta__switches">
+                  <p class="quiz-cta__switches-headline">Выберите удобный способ связи</p>
+                  <div class="quiz-cta__switch-wrapper">
+                    <label class="switch quiz-cta__switch">
+                      <input type="radio" name="messenger">
+                      <svg class="quiz-cta__switch-bg">
+                        <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
+                      </svg>
+                      <img src="./img/whatsapp.png" alt="" class="quiz-cta__switch-icon">
+                      <span class="quiz-cta__switch-text switch-text">WhatsApp</span>
+                    </label>
+                    <label class="switch quiz-cta__switch">
+                      <input type="radio" name="messenger">
+                      <svg class="quiz-cta__switch-bg">
+                        <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
+                      </svg>
+                      <img src="./img/telegram.png" alt="" class="quiz-cta__switch-icon">
+                      <span class="quiz-cta__switch-text switch-text">Telegram</span>
+                    </label>
+                    <label class="switch quiz-cta__switch">
+                      <input type="radio" name="messenger">
+                      <svg class="quiz-cta__switch-bg">
+                        <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
+                      </svg>
+                      <img src="./img/viber.png" alt="" class="quiz-cta__switch-icon">
+                      <span class="quiz-cta__switch-text switch-text">Viber</span>
+                    </label>
+                    <label class="switch quiz-cta__switch">
+                      <input type="radio" name="messenger">
+                      <svg class="quiz-cta__switch-bg">
+                        <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
+                      </svg>
+                      <img src="./img/phone.png" alt="" class="quiz-cta__switch-icon">
+                      <span class="quiz-cta__switch-text switch-text">Телефон</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="quiz-cta__switches">
+                  <p class="quiz-cta__switches-headline">Введите номер телефона</p>
+                  <label class="quiz-cta__tel-input switch">
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                    <img src="./img/radio-bg.svg" alt="">
+                  </label>
+                </div>
+                <button type="submit" class="quiz-cta__submit-btn button button_flat">
+                  <span>Получить подборку офисов<br> и коммерческое предложение</span>
+                </button>
               </div>
             </div>
           </div>
