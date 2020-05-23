@@ -36,9 +36,6 @@
     @include media('<=sm') {
       font-size: em(30);
     }
-    @include media('<=xs') {
-      font-size: em(24);
-    }
 
     & strong {
       color: var(--accent-color-khaki);
@@ -59,9 +56,6 @@
     }
     @include media('<=sm') {
       font-size: em(18);
-    }
-    @include media('<=xs') {
-      font-size: em(16);
     }
 
     & strong {
@@ -84,11 +78,6 @@
       family: var(--subtitle-font);
       size: em(16);
       weight: 500;
-    }
-    @include media('<=xs') {
-      max-width: 100%;
-      min-width: 100%;
-      padding: em(45) 0;
     }
   }
 
