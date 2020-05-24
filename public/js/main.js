@@ -1,13 +1,23 @@
-$('.btn-callback.modal-open').on('click', function(e) {
+$('.btn-callback').on('click', function(e) {
   e.preventDefault();
-  $('body').addClass('is-lock');
-  $(this.dataset.target).show({ duration: 0, done: function() { $(this).addClass('is-open') } });
-})
+  const { target, action } = this.dataset;
+  const animCfg = {
+    duration: 0,
+    done: function() {
+      console.log(this);
+      $(this).toggleClass('is-open');
+    }
+  }
 
-$('.btn-callback.modal-close').on('click', function(e) {
-  e.preventDefault();
-  $('body').removeClass('is-lock');
-  $(this.dataset.target).hide({ duration: 0, done: function() { $(this).removeClass('is-open') } });
+  $('body').toggleClass('is-lock');
+  switch (action) {
+    case 'open':
+      $(target).show(animCfg);
+      break;
+    case 'close':
+      $(target).hide(animCfg);
+      break;
+  }
 })
 
 $('button.next-step').on('click', function(evt) {

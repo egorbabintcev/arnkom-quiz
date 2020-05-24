@@ -30,7 +30,7 @@
           <a href="tel:+74996382450" class="header-contact__phone">+7 (499) 638-24-50</a>
         </div>
         <div>
-          <button data-target="#modal-callback" type="button" class="btn-callback modal-open header-contact__link">Заказать обратный звонок</button>
+          <button data-target="#modal-callback" data-action="open" type="button" class="btn-callback header-contact__link">Заказать обратный звонок</button>
         </div>
       </div>
     </header>
@@ -38,7 +38,7 @@
       <div class="main-content">
         <h1 class="main__title">Сэкономьте свое время<br>на поиск, <strong>подбор<br>и просмотр офисов</strong><br>в Москва Сити</h1>
         <h2 class="main__subtitle"><strong>Подберем 5 вариантов офисов по вашим<br>параметрам</strong>, оформим документы,<br>сопроводим сделку. Бесплатно.</h2>
-        <button data-target="#modal-quiz" class="btn-callback modal-open main__button">подобрать офис</button>
+        <button data-target="#modal-quiz" data-action="open" class="btn-callback main__button">подобрать офис</button>
       </div>
       <div class="main-features">
         <div class="main__feature">
@@ -60,7 +60,7 @@
         <div>
           <span class="footer-contact__phone">+7 (499) 638-24-50</span>
         </div>
-        <div><button data-target="#modal-callback" type="button" class="btn-callback modal-open footer-contact__link">Заказать обратный звонок</button></div>
+        <div><button data-target="#modal-callback" data-action="open" type="button" class="btn-callback footer-contact__link">Заказать обратный звонок</button></div>
       </div>
       <div class="footer-info">
         <div class="footer-info__politics">
@@ -79,7 +79,7 @@
   <div id="modal-quiz" class="modal modal-quiz">
     <div class="modal-dialog">
       <div class="modal-content">
-        <button data-target="#modal-quiz" class="btn-callback modal-close">
+        <button data-target="#modal-quiz" data-action="close" class="btn-callback modal-close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -557,7 +557,7 @@
   <div id="modal-callback" class="modal modal-callback">
     <div class="modal-dialog">
       <div class="modal-content">
-        <button data-target="#modal-callback" class="btn-callback modal-close">
+        <button data-target="#modal-callback" data-action="close" class="btn-callback modal-close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -581,7 +581,7 @@
                   <p class="quiz-cta__switches-headline">Выберите удобный способ связи</p>
                   <div class="quiz-cta__switch-wrapper">
                     <label class="switch quiz-cta__switch">
-                      <input type="radio" name="messenger">
+                      <input type="radio" name="messenger" value="Whatsapp">
                       <svg class="quiz-cta__switch-bg">
                         <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                       </svg>
@@ -589,7 +589,7 @@
                       <span class="quiz-cta__switch-text switch-text">WhatsApp</span>
                     </label>
                     <label class="switch quiz-cta__switch">
-                      <input type="radio" name="messenger">
+                      <input type="radio" name="messenger" value="Telegram">
                       <svg class="quiz-cta__switch-bg">
                         <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                       </svg>
@@ -597,7 +597,7 @@
                       <span class="quiz-cta__switch-text switch-text">Telegram</span>
                     </label>
                     <label class="switch quiz-cta__switch">
-                      <input type="radio" name="messenger">
+                      <input type="radio" name="messenger" value="Viber">
                       <svg class="quiz-cta__switch-bg">
                         <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                       </svg>
@@ -605,7 +605,7 @@
                       <span class="quiz-cta__switch-text switch-text">Viber</span>
                     </label>
                     <label class="switch quiz-cta__switch">
-                      <input type="radio" name="messenger">
+                      <input type="radio" name="messenger" value="По телефону">
                       <svg class="quiz-cta__switch-bg">
                         <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                       </svg>
