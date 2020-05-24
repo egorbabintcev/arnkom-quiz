@@ -92,6 +92,8 @@
           </svg>
         </button>
         <form class="quiz-form">
+          <input type="hidden" name="url">
+          <input type="hidden" name="form_type" value="Результаты квиза">
           <div class="quiz-form-wrapper">
             <div class="quiz-topbar">
               <img src="./img/header-logo.png" alt="" class="quiz-description__logo">
@@ -476,7 +478,7 @@
                         <p class="quiz-cta__switches-headline">Выберите удобный способ связи</p>
                         <div class="quiz-cta__switch-wrapper">
                           <label class="switch quiz-cta__switch">
-                            <input type="radio" name="messenger">
+                            <input type="radio" name="messenger" value="Whatsapp">
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
@@ -484,7 +486,7 @@
                             <span class="quiz-cta__switch-text switch-text">WhatsApp</span>
                           </label>
                           <label class="switch quiz-cta__switch">
-                            <input type="radio" name="messenger">
+                            <input type="radio" name="messenger" value="Telegram">
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
@@ -492,7 +494,7 @@
                             <span class="quiz-cta__switch-text switch-text">Telegram</span>
                           </label>
                           <label class="switch quiz-cta__switch">
-                            <input type="radio" name="messenger">
+                            <input type="radio" name="messenger" value="Viber">
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
@@ -500,7 +502,7 @@
                             <span class="quiz-cta__switch-text switch-text">Viber</span>
                           </label>
                           <label class="switch quiz-cta__switch">
-                            <input type="radio" name="messenger">
+                            <input type="radio" name="messenger" value="По телефону">
                             <svg class="quiz-cta__switch-bg">
                               <use xlink:href="./img/radio-bg-sprite.svg#radio-bg_big"></use>
                             </svg>
@@ -512,7 +514,7 @@
                       <div class="quiz-cta__switches">
                         <p class="quiz-cta__switches-headline">Введите номер телефона</p>
                         <label class="quiz-cta__tel-input switch">
-                          <input type="tel" placeholder="+7 (___) ___-__-__">
+                          <input required type="tel" name="phone_number" placeholder="+7 (___) ___-__-__">
                           <img src="./img/radio-bg.svg" alt="">
                         </label>
                       </div>
@@ -569,7 +571,9 @@
             d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z"/>
           </svg>
         </button>
-        <form class="callback-form">
+        <form method="POST" class="callback-form">
+          <input type="hidden" name="url" value="">
+          <input type="hidden" name="form_type" value="Форма обратной связи">
           <div class="callback-form-wrapper">
             <div class="quiz-cta__form">
               <div>
@@ -617,7 +621,7 @@
                 <div class="quiz-cta__switches">
                   <p class="quiz-cta__switches-headline">Введите номер телефона</p>
                   <label class="quiz-cta__tel-input switch">
-                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                    <input type="tel" name="phone_number" placeholder="+7 (___) ___-__-__">
                     <img src="./img/radio-bg.svg" alt="">
                   </label>
                 </div>

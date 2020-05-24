@@ -3,10 +3,7 @@ $('.btn-callback').on('click', function(e) {
   const { target, action } = this.dataset;
   const animCfg = {
     duration: 0,
-    done: function() {
-      console.log(this);
-      $(this).toggleClass('is-open');
-    }
+    done: function() { $(this).toggleClass('is-open') },
   }
 
   $('body').toggleClass('is-lock');
@@ -36,3 +33,16 @@ $('button.next-step').on('click', function(evt) {
 $('.switch').on('change', function() {
   $(this).parents('.quiz-step').find('button.next-step[disabled]').prop('disabled', false);
 });
+
+$('form input[name="url"]').prop('value', window.location.href);
+
+$('form').on('submit', function(evt) {
+  const data = $(this).serialize();
+
+  $.ajax({
+    type: 'POST',
+    url: '/php/submit.php',
+    data,
+    success: (res) => console.log(res),
+  });
+})
