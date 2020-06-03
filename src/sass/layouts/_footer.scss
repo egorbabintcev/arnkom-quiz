@@ -45,7 +45,7 @@
   &-info, &-pass {
     color: var(--light-color);
     line-height: 1.4;
-    opacity: 0.3;
+    opacity: 0.4;
     text-decoration: none;
     font: {
       family: var(--subtitle-font);
@@ -61,6 +61,10 @@
     margin-bottom: em(30);
     @include media('>md') {
       margin-right: em(50);
+    }
+
+    &__developer {
+      color: var(--accent-color-cyan);
     }
   }
 }
