@@ -364,6 +364,7 @@
       justify-content: space-between;
       max-width: em(300);
       min-width: em(300);
+      position: relative;
       @include media('<=sm') {
         max-width: em(315);
         min-width: em(315);
@@ -539,6 +540,25 @@
       span {
         font-size: em(12);
         line-height: 1.4;
+      }
+    }
+
+    &__accept {
+      bottom: 0;
+      left: 50%;
+      line-height: 1.4;
+      position: absolute;
+      text-align: center;
+      transform: translate(-50%, calc(100% + #{em(20)}));
+      white-space: nowrap;
+      font: {
+        size: em(12);
+        weight: 300;
+      }
+
+      button {
+        color: var(--accent-color-cyan);
+        text-decoration: underline;
       }
     }
   }
