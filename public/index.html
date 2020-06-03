@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
   <!-- Icon etc. -->
   <link rel="icon" type="image/png" href="./favicon.png">
 </head>
+
 <body>
   <div class="app">
     <img class="app-background-mockup app-background-mockup_left" src="./img/background-tree-left.png" alt="">
@@ -30,14 +32,17 @@
           <a href="tel:+74996382450" class="header-contact__phone">+7 (499) 638-24-50</a>
         </div>
         <div>
-          <button data-target="#modal-callback" data-action="open" type="button" class="btn-callback header-contact__link">Заказать обратный звонок</button>
+          <button data-target="#modal-callback" data-action="open" type="button"
+            class="btn-callback header-contact__link">Заказать обратный звонок</button>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="main-content">
-        <h1 class="main__title">Сэкономьте свое время<br>на поиск, <strong>подбор<br>и просмотр офисов</strong><br>в Москва Сити</h1>
-        <h2 class="main__subtitle"><strong>Подберем 5 вариантов офисов по вашим<br>параметрам</strong>, оформим документы,<br>сопроводим сделку. Бесплатно.</h2>
+        <h1 class="main__title">Сэкономьте свое время<br>на поиск, <strong>подбор<br>и просмотр офисов</strong><br>в
+          Москва Сити</h1>
+        <h2 class="main__subtitle"><strong>Подберем 5 вариантов офисов по вашим<br>параметрам</strong>, оформим
+          документы,<br>сопроводим сделку. Бесплатно.</h2>
         <button data-target="#modal-quiz" data-action="open" class="btn-callback main__button">подобрать офис</button>
       </div>
       <div class="main-features">
@@ -51,7 +56,7 @@
         </div>
         <div class="main__feature">
           <h3 class="main__feature-title">Назовём точную стоимость аренды от собственника</h3>
-          <p class="main__feature-subtitle">Получите  подробную презентацию о каждом объекте</p>
+          <p class="main__feature-subtitle">Получите подробную презентацию о каждом объекте</p>
         </div>
       </div>
     </main>
@@ -60,11 +65,13 @@
         <div>
           <a href="tel:+74996382450" class="footer-contact__phone">+7 (499) 638-24-50</a>
         </div>
-        <div><button data-target="#modal-callback" data-action="open" type="button" class="btn-callback footer-contact__link">Заказать обратный звонок</button></div>
+        <div><button data-target="#modal-callback" data-action="open" type="button"
+            class="btn-callback footer-contact__link">Заказать обратный звонок</button></div>
       </div>
       <div class="footer-info">
         <div class="footer-info__politics">
-          <a href="#">Политика конфиденциальности</a>
+          <button data-target="#modal-policy" data-action="open" type="button" class="btn-callback">Политика
+            конфиденциальности</button>
         </div>
         <div class="footer-info__developer">
           <a href="#">Разработка - Гончаров Константин</a>
@@ -80,15 +87,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <button data-target="#modal-quiz" data-action="close" class="btn-callback modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="23px" height="23px"
-          >
-            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
-            d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z"/>
-            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
-            d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px">
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z" />
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z" />
           </svg>
         </button>
         <form method="POST" class="quiz-form">
@@ -97,7 +100,8 @@
           <div class="quiz-form-wrapper">
             <div class="quiz-topbar">
               <img src="./img/header-logo.png" alt="" class="quiz-description__logo">
-              <span class="quiz-description__text">Тест: «Точный подбор и рассчёт<br>стоимости аренды офиса в Москва Сити»</span>
+              <span class="quiz-description__text">Тест: «Точный подбор и рассчёт<br>стоимости аренды офиса в Москва
+                Сити»</span>
             </div>
             <div class="quiz-main">
               <div class="quiz-step is-active">
@@ -143,20 +147,18 @@
                 <div class="quiz-step__controls">
                   <button disabled type="button" class="next-step quiz-step__controls-button button button_flat">
                     На следующий шаг
-                    <svg
-                      class="quiz-step__controls-button-arrow"
-                      viewbox="0 0 28 18"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <svg class="quiz-step__controls-button-arrow" viewbox="0 0 28 18" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z" />
                     </svg>
                   </button>
-                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить Вопрос</button>
+                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить
+                    Вопрос</button>
                 </div>
               </div>
               <div class="quiz-step">
@@ -218,20 +220,18 @@
                 <div class="quiz-step__controls">
                   <button disabled type="button" class="next-step quiz-step__controls-button button button_flat">
                     На следующий шаг
-                    <svg
-                      class="quiz-step__controls-button-arrow"
-                      viewbox="0 0 28 18"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <svg class="quiz-step__controls-button-arrow" viewbox="0 0 28 18" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z" />
                     </svg>
                   </button>
-                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить Вопрос</button>
+                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить
+                    Вопрос</button>
                 </div>
               </div>
               <div class="quiz-step">
@@ -293,20 +293,18 @@
                 <div class="quiz-step__controls">
                   <button disabled type="button" class="next-step quiz-step__controls-button button button_flat">
                     На следующий шаг
-                    <svg
-                      class="quiz-step__controls-button-arrow"
-                      viewbox="0 0 28 18"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <svg class="quiz-step__controls-button-arrow" viewbox="0 0 28 18" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z" />
                     </svg>
                   </button>
-                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить Вопрос</button>
+                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить
+                    Вопрос</button>
                 </div>
               </div>
               <div class="quiz-step">
@@ -352,20 +350,18 @@
                 <div class="quiz-step__controls">
                   <button disabled type="button" class="next-step quiz-step__controls-button button button_flat">
                     На следующий шаг
-                    <svg
-                      class="quiz-step__controls-button-arrow"
-                      viewbox="0 0 28 18"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <svg class="quiz-step__controls-button-arrow" viewbox="0 0 28 18" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z" />
                     </svg>
                   </button>
-                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить Вопрос</button>
+                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить
+                    Вопрос</button>
                 </div>
               </div>
               <div class="quiz-step">
@@ -427,20 +423,18 @@
                 <div class="quiz-step__controls">
                   <button disabled type="button" class="next-step quiz-step__controls-button button button_flat">
                     На следующий шаг
-                    <svg
-                      class="quiz-step__controls-button-arrow"
-                      viewbox="0 0 28 18"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <svg class="quiz-step__controls-button-arrow" viewbox="0 0 28 18" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z"/>
-                      <path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
-                      d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z"/>
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M-0.000,8.000 L25.000,8.000 L25.000,10.000 L-0.000,10.000 L-0.000,8.000 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M19.000,0.515 L27.485,9.000 L26.071,10.414 L17.586,1.929 L19.000,0.515 Z" />
+                      <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                        d="M27.485,9.000 L19.000,17.485 L17.586,16.071 L26.071,7.586 L27.485,9.000 Z" />
                     </svg>
                   </button>
-                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить Вопрос</button>
+                  <button type="button" class="next-step quiz-step__controls-button button button_strip">Пропустить
+                    Вопрос</button>
                 </div>
               </div>
               <div class="quiz-step is-last">
@@ -452,18 +446,21 @@
                   <div class="quiz-cta__thanks">
                     <div>
                       <h3 class="quiz-cta__thanks-title">Спасибо за прохождение теста!</h3>
-                      <p class="quiz-cta__thanks-subtitle">Ответы переданы нашему специалисту<br>он скоро приступит к работе и свяжется с вами</p>
+                      <p class="quiz-cta__thanks-subtitle">Ответы переданы нашему специалисту<br>он скоро приступит к
+                        работе и свяжется с вами</p>
                     </div>
                     <div class="quiz-cta__gifts">
                       <p class="quiz-cta__gifts-title">По окончанию теста вы получите:</p>
                       <div class="quiz-cta__gift-wrapper">
                         <div class="quiz-cta__gift">
                           <img src="./img/gift-pic-1-lg.png" alt="" class="quiz-cta__gift-img">
-                          <span class="quiz-cta__gift-text"><strong>Подборка подходящих<br>объектов</strong>, которых нет в открытом доступе</span>
+                          <span class="quiz-cta__gift-text"><strong>Подборка подходящих<br>объектов</strong>, которых
+                            нет в открытом доступе</span>
                         </div>
                         <div class="quiz-cta__gift">
                           <img src="./img/gift-pic-2-lg.png" alt="" class="quiz-cta__gift-img">
-                          <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикрисизсной стоимостью<br>аренды</strong> и условиями</span>
+                          <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикрисизсной
+                              стоимостью<br>аренды</strong> и условиями</span>
                         </div>
                       </div>
                     </div>
@@ -471,7 +468,8 @@
                   <div class="quiz-cta__form">
                     <div>
                       <p class="quiz-cta__form-title">Осталось<br> оставить контакты</p>
-                      <span class="quiz-cta__form-subtitle">Укажите куда отправить:<br>-Подборку подходящих объектов<br>-Антикрисизное коммерческое предложение</span>
+                      <span class="quiz-cta__form-subtitle">Укажите куда отправить:<br>-Подборку подходящих
+                        объектов<br>-Антикрисизное коммерческое предложение</span>
                     </div>
                     <div>
                       <div class="quiz-cta__switches">
@@ -536,18 +534,21 @@
                   </div>
                 </div>
                 <div class="quiz-sidebar__help-cloud">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium, doloremque placeat.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque impedit praesentium,
+                    doloremque placeat.</p>
                 </div>
               </div>
               <div class="quiz-sidebar__youget">
                 <p class="quiz-sidebar__youget-title">По окончанию теста вы получите:</p>
                 <div class="quiz-sidebar__youget-gift">
                   <img src="./img/gift-pic-1-lg.png" alt="" class="quiz-cta__gift-img">
-                  <span class="quiz-cta__gift-text"><strong>Подборка подходящих<br>объектов</strong>, которых нет<br> в открытом доступе</span>
+                  <span class="quiz-cta__gift-text"><strong>Подборка подходящих<br>объектов</strong>, которых нет<br> в
+                    открытом доступе</span>
                 </div>
                 <div class="quiz-sidebar__youget-gift">
                   <img src="./img/gift-pic-2-lg.png" alt="" class="quiz-cta__gift-img">
-                  <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикризисной стоимостью<br>аренды</strong> и условиями</span>
+                  <span class="quiz-cta__gift-text">Коммерческое предложение<br><strong>с антикризисной
+                      стоимостью<br>аренды</strong> и условиями</span>
                 </div>
               </div>
             </div>
@@ -560,15 +561,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <button data-target="#modal-callback" data-action="close" class="btn-callback modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="23px" height="23px"
-          >
-            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
-            d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z"/>
-            <path fill-rule="evenodd"  fill="rgb(254, 223, 130)"
-            d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px">
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z" />
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z" />
           </svg>
         </button>
         <form method="POST" class="callback-form">
@@ -578,7 +575,8 @@
             <div class="quiz-cta__form">
               <div>
                 <p class="quiz-cta__form-title">Заказать<br> обратный звонок</p>
-                <span class="quiz-cta__form-subtitle">Оставьте ваши данные, и наш специалист<br>свяжется с вами в течение 8 минут</span>
+                <span class="quiz-cta__form-subtitle">Оставьте ваши данные, и наш специалист<br>свяжется с вами в
+                  течение 8 минут</span>
               </div>
               <div>
                 <div class="quiz-cta__switches">
@@ -635,10 +633,80 @@
       </div>
     </div>
   </div>
+  <div id="modal-policy" class="modal modal-policy">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button data-target="#modal-policy" data-action="close" class="btn-callback modal-close">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px">
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M20.845,-0.001 L23.001,2.155 L2.155,23.001 L-0.001,20.845 L20.845,-0.001 Z" />
+            <path fill-rule="evenodd" fill="rgb(254, 223, 130)"
+              d="M2.155,-0.001 L23.001,20.845 L20.845,23.001 L-0.001,2.155 L2.155,-0.001 Z" />
+          </svg>
+        </button>
+        <div class="modal-policy__wrapper">
+          <h2 class="modal-policy__title">Политика конфиденциальности</h2>
+          <div class="modal-policy__content">
+            <p>Администрация сайта https://lp.arnkom.ru/ (далее Сайт) с уважением относится к правам посетителей
+              Сайта. Мы безоговорочно признаем важность конфиденциальности личной информации посетителей нашего Сайта.
+            </p>
+            <p>Посещая Сайт, Вы полностью соглашаетесь с данной Политикой конфиденциальности.<br>
+              Основные положения нашей политики конфиденциальности формулируются следующим образом:<br>
+              • Мы не передаем Вашу персональную информацию третьим лицам.<br>
+              • Мы не передаем Вашу контактную информацию без Вашего согласия.<br>
+              • Вы самостоятельно определяете объем раскрываемой персональной информации.</p>
+            <p><strong><br>Собираемая информация</strong><br>
+              Мы собираем следующую информацию:<br>
+              • Ваша персональная информация, которую Вы сознательно согласились раскрыть нам.<br>
+              • Техническая информация, автоматически собираемая программным обеспечением Сайта во время его
+              посещения.<br>
+              • Техническую информацию о посещении Сайта (обезличенную) также собирают установленные на сайте счетчики
+              статистики.</p>
+            <p><strong><br>Использование полученной информации</strong><br>
+              • Информация, предоставляемая Вами при использовании виджетов обратной связи, а также техническая
+              информация используется исключительно для улучшения работы сайта. Вся контактная информация, которую Вы
+              нам предоставляете, раскрывается только с Вашего разрешения. Адреса электронной почты никогда не
+              публикуются на Сайте и используются нами только для связи с Вами.</p>
+            <p><strong><br>Использование cookies</strong><br>
+              • Мы никогда не предоставляем Вашу личную информацию третьим лицам, кроме случаев, когда это прямо может
+              требовать законодательство (например, по запросу суда).</p>
+            <p><strong><br>
+                Предоставление информации третьим лицам</strong><br>
+              • На Сайте применяется технология идентификации пользователей, основанная на использовании файлов cookies.
+              Сookies – это небольшие текстовые файлы, сохраняемые на Вашем компьютере посредством веб-браузера..<br>
+              • При использовании Пользователем Сайта на компьютер, используемый им для доступа, могут быть записаны
+              файлы cookies, которые в дальнейшем будут использованы для автоматической авторизации Пользователя на
+              Сайте, а также для сбора статистических данных, в частности о посещаемости Сайта. При этом мы никогда не
+              сохраняем персональные данные или пароли в файлах cookies.<br>
+              • Если Вы все же полагаете, что по тем или иным причинам использование технологии cookies для Вас
+              неприемлемо, Вы вправе запретить сохранение файлов cookies на компьютере, используемом для доступа к
+              Сайту, соответствующим образом настроив браузер. При этом следует иметь в виду, что все сервисы в сети
+              Интернет, использующие данную технологию, окажутся недоступными.</p>
+            <p><strong><br>
+                Защита данных</strong><br>
+              • Администрация Сайта осуществляет защиту информации, предоставленной пользователями, и использует ее
+              только в соответствии с принятой Политикой конфиденциальности. На Сайте используются общепринятые методы
+              безопасности для обеспечения защиты информации от потери, искажения и несанкционированного
+              распространения. Безопасность реализуется программными средствами сетевой защиты, процедурами проверки
+              доступа, применением криптографических средств защиты информации, соблюдением политики конфиденциальности.
+            </p>
+            <p><strong><br>
+                Заключительные положения</strong><br>
+              Никакие из содержащихся здесь заявлений не означают заключения договора между Владельцем Сайта и
+              Пользователем, предоставляющим персональную информацию. Политика конфиденциальности лишь проинформирует
+              Вас о подходах Сайта к работе с персональными данными.<br>
+              Мы оставляем за собой право вносить изменения в настоящую политику конфиденциальности в любое время без
+              предварительного уведомления.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Connecting scripts -->
   <script src="./js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.3.1/jquery.maskedinput.min.js"></script>
   <script async src="./js/main.js"></script>
 </body>
+
 </html>
