@@ -8,11 +8,12 @@
     max-width: em(1170);
     min-width: em(1170);
     min-height: em(775);
-    padding: em(65) em(75) em(70);
+    padding: em(65) em(70);
     text-align: center;
     @include media('<=sm') {
       max-width: em(480);
       min-width: 100%;
+      padding: em(50) em(25);
     }
   }
 
