@@ -24,7 +24,7 @@
         areas: 'topbar sidebar'
                'main sidebar';
       }
-      padding: em(65) em(75) em(70);
+      padding: em(65) em(75) em(90);
       @include media('>sm') {
         &.last-step {
           grid-template-areas: 'topbar topbar'
@@ -139,7 +139,7 @@
       }
 
       &-gift {
-        background-color: #292e31;
+        background-color: var(--dark-color-lightest);
         border-radius: em(8);
         max-height: em(160);
         min-height: em(160);
@@ -366,6 +366,7 @@
       min-width: em(300);
       position: relative;
       @include media('<=sm') {
+        margin-bottom: em(60);
         max-width: em(315);
         min-width: em(315);
       }
@@ -412,7 +413,7 @@
     }
 
     &__gift {
-      background-color: var(--dark-color-lighter);
+      background-color: var(--dark-color-lightest);
       border-radius: em(10);
       max-height: em(285);
       min-height: em(285);
@@ -549,7 +550,7 @@
       line-height: 1.4;
       position: absolute;
       text-align: center;
-      transform: translate(-50%, calc(100% + #{em(20)}));
+      transform: translate(-50%, calc(100% + #{em(20, 12)}));
       white-space: nowrap;
       font: {
         size: em(12);
