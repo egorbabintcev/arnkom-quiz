@@ -25,7 +25,7 @@
 
   &_strip {
     color: var(--light-color);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     text-decoration: underline;
   }
 }

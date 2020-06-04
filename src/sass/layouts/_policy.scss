@@ -24,7 +24,7 @@
       margin-bottom: em(15);
       font: {
         size: em(18);
-        weight: 300;
+        weight: var(--font-weight-light);
       }
 
       strong {

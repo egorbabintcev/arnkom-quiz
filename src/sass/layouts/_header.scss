@@ -61,7 +61,7 @@
       opacity: 0.3;
       font: {
         family: var(--subtitle-font);
-        weight: 300;
+        weight: var(--font-weight-light);
         size: em(14);
       }
     }

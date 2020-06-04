@@ -50,7 +50,7 @@
     font: {
       family: var(--subtitle-font);
       size: em(14);
-      weight: 300;
+      weight: var(--font-weight-light);
     }
     @include media('<=md') {
       text-align: center;
